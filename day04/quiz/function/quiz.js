@@ -108,8 +108,9 @@ const calculator = {
     this.history.push(mulHistory);
   },
   divide: function (num) {
+    if (x == 0) console.log("에러");
+    else this.result /= num;
     const divHistory = `${this.result} / ${num} = ${this.result / num}`;
-    this.result /= num;
     this.history.push(divHistory);
   },
   square: function () {
